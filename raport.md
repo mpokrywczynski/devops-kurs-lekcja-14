@@ -1,3 +1,34 @@
+# Raport z testu wydajności serwera WWW
+
+- **Data wykonania**: 2026-11-19 14:00:07
+- **Maszyna testowa**: DESKTOP-KFID43G, 8 rdzeni, 7.6Gi RAM
+- **Plik danych**: `wyniki-20261119-135442.csv`
+- **Kryterium zaliczenia**: p95 poniżej 400 ms przy zerowej liczbie błędów
+
+## Wyniki pomiarów
+
+| Konkurencja | RPS | p50 [ms] | p95 [ms] | p99 [ms] | Błędy | Ocena |
+|---|---|---|---|---|---|---|
+| 10 | 66048.0 | 0 | 0 | 0 | 0 | zaliczony |
+| 25 | 69601.5 | 0 | 1 | 1 | 0 | zaliczony |
+| 50 | 68526.0 | 1 | 2 | 2 | 0 | zaliczony |
+| 100 | 89895.7 | 0 | 2 | 6 | 0 | zaliczony |
+| 200 | 70952.2 | 2 | 7 | 9 | 0 | zaliczony |
+| 400 | 41082.9 | 4 | 20 | 23 | 0 | zaliczony |
+
+## Wnioski automatyczne
+
+- Maksymalna zmierzona przepustowość: **89895.7 RPS** przy konkurencji 100.
+- Najwyższa konkurencja spełniająca kryterium (p95 < 400 ms, 0 błędów): **400**.
+- W całym zakresie testu nie wystąpił ani jeden błąd.
+- Przepustowość przy najwyższej konkurencji spadła o 54% względem maksimum - system jest za punktem załamania.
+
+## Zalecenia
+
+1. Za pojemność operacyjną przyjmij konkurencję o jeden poziom niższą od najwyższej zaliczonej.
+2. Powtórz pomiar trzykrotnie i porównaj mediany, zanim uznasz wynik za wiążący.
+3. Przed zmianą konfiguracji zapisz obecne wartości jako punkt odniesienia (baseline).
+
 ## Mediany z trzech przebiegów
 
 | Konkurencja | RPS | p50 [ms] | p95 [ms] | p99 [ms] | Nieudane | Non-2xx |
