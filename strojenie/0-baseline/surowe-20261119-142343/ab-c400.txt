@@ -1,0 +1,54 @@
+This is ApacheBench, Version 2.3 <$Revision: 1879490 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking portfolio.local (be patient)
+Completed 5000 requests
+Completed 10000 requests
+Completed 15000 requests
+Completed 20000 requests
+Completed 25000 requests
+Completed 30000 requests
+Completed 35000 requests
+Completed 40000 requests
+Completed 45000 requests
+Completed 50000 requests
+Finished 50000 requests
+
+
+Server Software:        nginx/1.18.0
+Server Hostname:        portfolio.local
+Server Port:            80
+
+Document Path:          /
+Document Length:        492 bytes
+
+Concurrency Level:      400
+Time taken for tests:   0.377 seconds
+Complete requests:      50000
+Failed requests:        0
+Keep-Alive requests:    49716
+Total transferred:      36948580 bytes
+HTML transferred:       24600000 bytes
+Requests per second:    132624.24 [#/sec] (mean)
+Time per request:       3.016 [ms] (mean)
+Time per request:       0.008 [ms] (mean, across all concurrent requests)
+Transfer rate:          95708.54 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.8      0      14
+Processing:     0    3   3.1      1      14
+Waiting:        0    3   3.1      1       9
+Total:          0    3   3.3      1      18
+
+Percentage of the requests served within a certain time (ms)
+  50%      1
+  66%      5
+  75%      6
+  80%      7
+  90%      8
+  95%      8
+  98%      9
+  99%      9
+ 100%     18 (longest request)
